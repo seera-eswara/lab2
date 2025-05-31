@@ -22,3 +22,9 @@ jobs:
     steps:
       - name: Printing Custom Message
         run: echo "Custom message is  ${{inputs.custom_message}}"
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing run-job boolean value
+        if:  inputs.run-job == true
+        run: echo "boolean value is ${{inputs.run_job}}"
